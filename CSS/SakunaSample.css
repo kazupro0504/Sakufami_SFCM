@@ -1486,3 +1486,34 @@ body.search-page .common-header .recent-additions {
 .playlist-result-cards::-webkit-scrollbar {
     height: 8px;
 }
+/* 全ページ共通オープニング */
+
+    .sakuna-opening__title { white-space: nowrap !important; word-break: keep-all; overflow-wrap: normal; }
+    .sakuna-opening { position: fixed; inset: 0; z-index: 99999; display: grid; place-items: center; overflow: hidden; background: radial-gradient(ellipse at 25% 25%, #fff 0%, transparent 50%), radial-gradient(ellipse at 75% 70%, #d8f5ff 0%, transparent 52%), linear-gradient(135deg,#ffe2f0 0%,#fff8fd 48%,#e2f5ff 100%); transition: opacity .9s ease, visibility .9s ease; }
+    .sakuna-opening.is-finished { opacity: 0; visibility: hidden; pointer-events: none; }
+    .sakuna-opening__glow { position: absolute; width: min(90vw,650px); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle,#fff 0%,#fff9fd99 35%,transparent 70%); animation: sakuna-pulse 2.4s ease-in-out infinite alternate; }
+    .sakuna-opening__center { position: relative; z-index: 1; width: 100%; padding: 28px 16px; text-align: center; animation: sakuna-enter 1.2s cubic-bezier(.2,.8,.2,1) both; }
+    .sakuna-opening__crown { font-size: clamp(1.8rem,5vw,3rem); color: #ff8bbd; letter-spacing: .5em; margin-left: .5em; filter: drop-shadow(0 2px 8px #ffb8d5); }
+    .sakuna-opening__eyebrow { margin: 22px 0 8px; color: #b17ba2; font-size: clamp(.65rem,2.2vw,.9rem); letter-spacing: .18em; font-weight: 700; }
+    .sakuna-opening__title { margin: 0; font-family: 'Hiragino Maru Gothic ProN','Yu Gothic',sans-serif; font-size: clamp(2.15rem,9.3vw,6.3rem); font-weight: 900; letter-spacing: .04em; color: #fa83b3; text-shadow: 0 4px 0 #fff, 0 8px 25px #f6a8c999, 2px 2px 0 #fff; }
+    .sakuna-opening__subtitle { margin: 18px auto 25px; color: #b47a9e; font-size: clamp(.8rem,3vw,1.1rem); font-weight: 700; }
+    .sakuna-opening__progress { width: min(210px,55vw); height: 5px; margin: auto; border-radius: 99px; background: #fff; overflow: hidden; box-shadow: 0 1px 10px #ffc4dc; }
+    .sakuna-opening__progress span { display: block; height: 100%; width: 100%; transform-origin: left; background: linear-gradient(90deg,#ffa9d1,#a7e6ff,#ff94c3); animation: sakuna-progress 2.4s ease-out both; }
+    .sakuna-opening__ornaments { position: absolute; inset: 0; pointer-events: none; }
+    .sakuna-opening__ornaments span { position: absolute; font-size: clamp(1.4rem,4vw,3rem); color: #ff9cc7; text-shadow: 0 0 15px #fff; animation: sakuna-float 3s ease-in-out infinite alternate; }
+    .sakuna-opening__ornaments span:nth-child(1) { top: 12%; left: 12%; }
+    .sakuna-opening__ornaments span:nth-child(2) { top: 18%; right: 16%; animation-delay: -.7s; }
+    .sakuna-opening__ornaments span:nth-child(3) { top: 55%; left: 7%; color: #8edcf7; animation-delay: -1.2s; }
+    .sakuna-opening__ornaments span:nth-child(4) { bottom: 17%; right: 12%; animation-delay: -.4s; }
+    .sakuna-opening__ornaments span:nth-child(5) { bottom: 13%; left: 25%; color: #8edcf7; animation-delay: -1.5s; }
+    .sakuna-opening__ornaments span:nth-child(6) { top: 9%; left: 53%; animation-delay: -2s; }
+    .sakuna-opening__ornaments span:nth-child(7) { bottom: 30%; right: 5%; color: #a1e0f6; animation-delay: -1s; }
+    .sakuna-opening__ornaments span:nth-child(8) { top: 37%; right: 28%; animation-delay: -2.2s; }
+    body.is-intro-playing { overflow: hidden; }
+    @keyframes sakuna-enter { from { opacity: 0; transform: translateY(35px) scale(.88); filter: blur(8px); } to { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); } }
+    @keyframes sakuna-float { from { transform: translateY(12px) rotate(-12deg) scale(.8); opacity: .5; } to { transform: translateY(-18px) rotate(15deg) scale(1.15); opacity: 1; } }
+    @keyframes sakuna-pulse { from { transform: scale(.9); opacity: .65; } to { transform: scale(1.15); opacity: 1; } }
+    @keyframes sakuna-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+    @media (prefers-reduced-motion: reduce) { .sakuna-opening *, .sakuna-opening *::before, .sakuna-opening *::after { animation: none !important; } .sakuna-opening { transition-duration: .1s; } }
+
+   
