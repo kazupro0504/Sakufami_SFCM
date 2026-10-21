@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap");
+
 .menu-btn/* {background-color: #fdafbb;} */
 h1 {
     color: #000000;
@@ -10,7 +12,7 @@ em {
 /* ページ全体 */
 body {
     font-family: Arial, sans-serif;
-    background: #ffd6e5;
+    /* 旧背景を無効化（SAKUNA CLEAR LUXEを適用）: background: #ffd6e5; */
 
     /* 上の余白を少し減らす */
     padding: 20px 40px 40px;
@@ -20,7 +22,7 @@ body {
 }
 
 h1 {
-    color: #000000;
+    /* 同一セレクターの後続設定を優先: color: #000000; */
 
     /* タイトルを少し中央寄りにする */
     text-align: center;
@@ -95,9 +97,9 @@ h1 {
 
 /* ボタンを横並び */
 .profile-list {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
+    /* 同一セレクターの後続設定を優先: display: flex; */
+    /* 同一セレクターの後続設定を優先: justify-content: center; */
+    /* 同一セレクターの後続設定を優先: gap: 40px; */
     flex-wrap: wrap;
 }
 
@@ -135,21 +137,21 @@ h1 {
    ======================================== */
 
 .menu-btn {
-    width: 40px;
+    /* 同一セレクターの後続設定を優先: width: 40px; */
     height: 40px;
 
     /* ブラウザ標準のボタン表示を消す */
-    padding: 0;
+    /* 同一セレクターの後続設定を優先: padding: 0; */
     margin: 0;
 
-    background: transparent;
+    /* 同一セレクターの後続設定を優先: background: transparent; */
     border: none;
 
     cursor: pointer;
 
     position: fixed;
     top: 20px;
-    right: 20px;
+    /* 同一セレクターの後続設定を優先: right: 20px; */
 
     z-index: 1000;
 }
@@ -158,16 +160,16 @@ h1 {
 /* 三本線 */
 
 .menu-btn span {
-    display: block;
+    /* 同一セレクターの後続設定を優先: display: block; */
 
-    width: 100%;
-    height: 4px;
+    /* 同一セレクターの後続設定を優先: width: 100%; */
+    /* 同一セレクターの後続設定を優先: height: 4px; */
 
-    background: #333;
+    /* 同一セレクターの後続設定を優先: background: #333; */
 
-    margin: 6px 0;
+    /* 同一セレクターの後続設定を優先: margin: 6px 0; */
 
-    transition: 0.3s;
+    /* 同一セレクターの後続設定を優先: transition: 0.3s; */
 }
 
 
@@ -176,45 +178,45 @@ h1 {
    ======================================== */
 
 .menu-btn.active span:nth-child(1) {
-    transform:
-        translateY(10px) rotate(45deg);
+    /* 同一セレクターの後続設定を優先: transform:
+        translateY(10px) rotate(45deg); */
 }
 
 .menu-btn.active span:nth-child(2) {
-    opacity: 0;
+    /* 同一セレクターの後続設定を優先: opacity: 0; */
 }
 
 .menu-btn.active span:nth-child(3) {
-    transform:
-        translateY(-10px) rotate(-45deg);
+    /* 同一セレクターの後続設定を優先: transform:
+        translateY(-10px) rotate(-45deg); */
 }
 
 /* 三本線 */
 .menu-btn span {
-    display: block;
-    width: 100%;
-    height: 4px;
-    background: #333;
-    margin: 8px 0;
+    /* 同一セレクターの後続設定を優先: display: block; */
+    /* 同一セレクターの後続設定を優先: width: 100%; */
+    /* 同一セレクターの後続設定を優先: height: 4px; */
+    /* 同一セレクターの後続設定を優先: background: #333; */
+    /* 同一セレクターの後続設定を優先: margin: 8px 0; */
 
-    transition: 0.3s;
+    /* 同一セレクターの後続設定を優先: transition: 0.3s; */
 }
 
 /* 1本目 */
 .menu-btn.active span:nth-child(1) {
-    transform:
-        translateY(12px) rotate(45deg);
+    /* 同一セレクターの後続設定を優先: transform:
+        translateY(12px) rotate(45deg); */
 }
 
 /* 2本目 */
 .menu-btn.active span:nth-child(2) {
-    opacity: 0;
+    /* 同一セレクターの後続設定を優先: opacity: 0; */
 }
 
 /* 3本目 */
 .menu-btn.active span:nth-child(3) {
-    transform:
-        translateY(-12px) rotate(-45deg);
+    /* 同一セレクターの後続設定を優先: transform:
+        translateY(-12px) rotate(-45deg); */
 }
 
 /* メニューは最初は非表示 */
@@ -222,12 +224,12 @@ h1 {
     display: none;
 
     position: fixed;
-    top: 70px;
-    right: 20px;
+    /* 同一セレクターの後続設定を優先: top: 70px; */
+    /* 同一セレクターの後続設定を優先: right: 20px; */
 
     background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
+    /* 同一セレクターの後続設定を優先: border-radius: 10px; */
+    /* 同一セレクターの後続設定を優先: box-shadow: 0 4px 10px rgba(0, 0, 0, .2); */
 
     min-width: 180px;
     overflow: hidden;
@@ -276,9 +278,9 @@ h1 {
 }
 
 .news-card {
-    text-decoration: none;
+    /* 同一セレクターの後続設定を優先: text-decoration: none; */
     /* 下線を消す */
-    color: inherit;
+    /* 同一セレクターの後続設定を優先: color: inherit; */
     /* 文字色を親要素と同じにする */
 }
 
@@ -360,18 +362,18 @@ h1 {
     position: fixed;
 
     top: 20px;
-    left: 20px;
+    /* 同一セレクターの後続設定を優先: left: 20px; */
 
     /* ボタンのサイズ */
-    padding: 10px 18px;
+    /* 同一セレクターの後続設定を優先: padding: 10px 18px; */
 
     /* 文字 */
-    font-size: 16px;
-    font-weight: bold;
+    /* 同一セレクターの後続設定を優先: font-size: 16px; */
+    /* 同一セレクターの後続設定を優先: font-weight: bold; */
 
     /* 色 */
-    color: #333;
-    background: #fff;
+    /* 同一セレクターの後続設定を優先: color: #333; */
+    /* 同一セレクターの後続設定を優先: background: #fff; */
 
     /* 枠 */
     border: 1px solid #ccc;
@@ -411,7 +413,7 @@ h1 {
 
     gap: 10px;
 
-    margin-top: 15px;
+    /* 同一セレクターの後続設定を優先: margin-top: 15px; */
 
 }
 
@@ -497,15 +499,15 @@ h1 {
 
 .wide-navigation a {
 
-    text-decoration: none;
+    /* 同一セレクターの後続設定を優先: text-decoration: none; */
 
-    color: #333;
+    /* 同一セレクターの後続設定を優先: color: #333; */
 
-    font-size: 18px;
+    /* 同一セレクターの後続設定を優先: font-size: 18px; */
 
-    font-weight: bold;
+    /* 同一セレクターの後続設定を優先: font-weight: bold; */
 
-    white-space: nowrap;
+    /* 同一セレクターの後続設定を優先: white-space: nowrap; */
 
 }
 
@@ -730,7 +732,7 @@ h1 {
 
     /* PC拡大を解除 */
     body {
-        zoom: 1;
+        /* 同一セレクターの後続設定を優先: zoom: 1; */
     }
 
 }
@@ -1025,25 +1027,25 @@ h1 {
    ======================================== */
 
 .news-card {
-    display: flex;
-    flex-direction: column;
+    /* 同一セレクターの後続設定を優先: display: flex; */
+    /* 同一セレクターの後続設定を優先: flex-direction: column; */
 }
 
 .news-content {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+    /* 同一セレクターの後続設定を優先: display: flex; */
+    /* 同一セレクターの後続設定を優先: flex-direction: column; */
+    /* 同一セレクターの後続設定を優先: flex: 1; */
 }
 
 /* タイトル部分の高さを統一 */
 .news-card h3 {
-    line-height: 1.5;
-    min-height: 3em;
+    /* 同一セレクターの後続設定を優先: line-height: 1.5; */
+    /* 同一セレクターの後続設定を優先: min-height: 3em; */
 }
 
 /* ボタンをカード下部に固定 */
 .card-actions {
-    margin-top: auto;
+    /* 同一セレクターの後続設定を優先: margin-top: auto; */
 }
 
 /* ========================================
@@ -1224,20 +1226,20 @@ body.search-page .common-header .recent-additions {
     position:fixed;
 
     top:20px;
-    right:75px;
+    /* 同一セレクターの後続設定を優先: right:75px; */
 
     /* 水色の丸の大きさ */
-    width:60px;
+    /* 同一セレクターの後続設定を優先: width:60px; */
     height:60px;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    /* 同一セレクターの後続設定を優先: display:flex; */
+    /* 同一セレクターの後続設定を優先: align-items:center; */
+    /* 同一セレクターの後続設定を優先: justify-content:center; */
 
     text-decoration:none;
 
     
-    background:#fff;
+    /* 同一セレクターの後続設定を優先: background:#fff; */
 
     /* 丸 */
     border-radius:50%;
@@ -1262,10 +1264,10 @@ body.search-page .common-header .recent-additions {
 .search-button img{
 
     /* 写真だけ小さくする */
-    width:35px;
-    height:35px;
+    /* 同一セレクターの後続設定を優先: width:35px; */
+    /* 同一セレクターの後続設定を優先: height:35px; */
 
-    object-fit:contain;
+    /* 同一セレクターの後続設定を優先: object-fit:contain; */
 
     display:block;
 }
@@ -1495,7 +1497,7 @@ body.search-page .common-header .recent-additions {
     .sakuna-opening__center { position: relative; z-index: 1; width: 100%; padding: 28px 16px; text-align: center; animation: sakuna-enter 1.2s cubic-bezier(.2,.8,.2,1) both; }
     .sakuna-opening__crown { font-size: clamp(1.8rem,5vw,3rem); color: #ff8bbd; letter-spacing: .5em; margin-left: .5em; filter: drop-shadow(0 2px 8px #ffb8d5); }
     .sakuna-opening__eyebrow { margin: 22px 0 8px; color: #b17ba2; font-size: clamp(.65rem,2.2vw,.9rem); letter-spacing: .18em; font-weight: 700; }
-    .sakuna-opening__title { margin: 0; font-family: 'Hiragino Maru Gothic ProN','Yu Gothic',sans-serif; font-size: clamp(2.15rem,9.3vw,6.3rem); font-weight: 900; letter-spacing: .04em; color: #fa83b3; text-shadow: 0 4px 0 #fff, 0 8px 25px #f6a8c999, 2px 2px 0 #fff; }
+    .sakuna-opening__title { margin: 0; font-family: 'Hiragino Maru Gothic ProN','Yu Gothic',sans-serif; font-size: clamp(2.15rem,9.3vw,6.3rem); /* 同一セレクターの後続設定を優先: font-weight: 900; */ letter-spacing: .04em; color: #fa83b3; text-shadow: 0 4px 0 #fff, 0 8px 25px #f6a8c999, 2px 2px 0 #fff; }
     .sakuna-opening__subtitle { margin: 18px auto 25px; color: #b47a9e; font-size: clamp(.8rem,3vw,1.1rem); font-weight: 700; }
     .sakuna-opening__progress { width: min(210px,55vw); height: 5px; margin: auto; border-radius: 99px; background: #fff; overflow: hidden; box-shadow: 0 1px 10px #ffc4dc; }
     .sakuna-opening__progress span { display: block; height: 100%; width: 100%; transform-origin: left; background: linear-gradient(90deg,#ffa9d1,#a7e6ff,#ff94c3); animation: sakuna-progress 2.4s ease-out both; }
@@ -1517,3 +1519,439 @@ body.search-page .common-header .recent-additions {
     @media (prefers-reduced-motion: reduce) { .sakuna-opening *, .sakuna-opening *::before, .sakuna-opening *::after { animation: none !important; } .sakuna-opening { transition-duration: .1s; } }
 
    
+    
+
+
+/* ===== オープニングと統一したパステルデザイン ===== */
+html { /* 同一セレクターの後続設定を優先: min-height: 100%; */ /* 旧背景を無効化（SAKUNA CLEAR LUXEを適用）: background: #fff8fd; */ }
+body {
+  /* 同一セレクターの後続設定を優先: color: #51475b; */
+  /* 旧背景を無効化（SAKUNA CLEAR LUXEを適用）: background-color: #fff8fd; */
+  /* 旧背景を無効化（SAKUNA CLEAR LUXEを適用）: background-image:
+    radial-gradient(ellipse at 15% 12%, rgba(255,255,255,.96), transparent 45%),
+    radial-gradient(ellipse at 86% 28%, rgba(216,245,255,.83), transparent 49%),
+    radial-gradient(ellipse at 15% 76%, rgba(255,220,237,.76), transparent 48%),
+    linear-gradient(135deg,#ffe2f0 0%,#fff8fd 48%,#e2f5ff 100%); */
+  /* 旧背景を無効化（SAKUNA CLEAR LUXEを適用）: background-attachment: fixed; */
+}
+h1, h2, h3, h4 { /* 同一セレクターの後続設定を優先: color: #775273; */ }
+h1 { color: #dc6eaa; /* 同一セレクターの後続設定を優先: text-shadow: 0 2px 0 #fff, 0 4px 15px #f7b6d580; */ }
+h2 { border-left: 5px solid #f4a0ca; padding-left: 12px; }
+.card, .news-card, .playlist-card, .recent-additions, .wide-navigation, .filter-section, .quick-menu {
+  background: rgba(255,255,255,.91);
+  border: 1px solid rgba(255,176,212,.5);
+  box-shadow: 0 8px 25px rgba(183,128,168,.14);
+  backdrop-filter: blur(9px);
+}
+.card, .news-card, .playlist-card { border-radius: 16px; }
+.btn, .filter-button.active {
+  /* 同一セレクターの後続設定を優先: background: linear-gradient(110deg,#ef86bb,#8bcfe9); */
+  border-color: #efb0d2;
+  /* 同一セレクターの後続設定を優先: color: #fff; */
+  /* 同一セレクターの後続設定を優先: box-shadow: 0 4px 12px rgba(218,130,178,.22); */
+}
+.btn:hover, .filter-button.active:hover { /* 同一セレクターの後続設定を優先: background: linear-gradient(110deg,#e976ad,#74bfdf); */ }
+.wide-navigation a:hover, .quick-menu a:hover { background: #fff0f8; color: #c25b98; }
+.back-button, .search-button { background: #fffafd; border-color: #9bdff3; }
+/* スクロール中に隠し、停止して350ms後に再表示 */
+.search-button, .back-button {
+  transition: opacity .25s ease, visibility .25s ease, transform .25s ease;
+}
+body.is-scrolling .search-button,
+body.is-scrolling .back-button {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-12px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .search-button, .back-button { transition: none; }
+}
+
+
+/* ===== 背景に散りばめるハート ===== */
+.sakuna-floating-hearts {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  contain: layout paint;
+}
+.sakuna-floating-heart {
+  position: absolute;
+  display: block;
+  line-height: 1;
+  opacity: .16;
+  filter: drop-shadow(0 2px 4px rgba(255,255,255,.85));
+  animation: sakuna-heart-drift 16s ease-in-out infinite alternate;
+  will-change: transform, opacity;
+}
+.sakuna-floating-heart.pink { color: #f48dbb; }
+.sakuna-floating-heart.blue { color: #84cde9; }
+@keyframes sakuna-heart-drift {
+  0%   { transform: translate3d(-4px, 6px, 0) rotate(-7deg) scale(.92); opacity: .09; }
+  50%  { opacity: .19; }
+  100% { transform: translate3d(6px, -10px, 0) rotate(7deg) scale(1.04); opacity: .12; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sakuna-floating-heart { animation: none; opacity: .12; }
+}
+
+
+/* ===== 控えめなフローティング操作ボタン ===== */
+:root {
+  --sakuna-control-size: 44px;
+  --sakuna-control-top: 16px;
+  --sakuna-control-right: 16px;
+  --sakuna-control-gap: 10px;
+}
+.menu-btn, .search-button, .back-button {
+  box-sizing: border-box;
+  position: fixed;
+  top: var(--sakuna-control-top);
+  height: var(--sakuna-control-size);
+  border-radius: 999px;
+  /* 同一セレクターの後続設定を優先: border: 1px solid rgba(255, 255, 255, .9); */
+  /* 同一セレクターの後続設定を優先: background: linear-gradient(145deg, rgba(255,255,255,.90), rgba(250,238,250,.82) 58%, rgba(220,245,255,.86)); */
+  /* 同一セレクターの後続設定を優先: box-shadow: 0 4px 16px rgba(148,113,151,.13), inset 0 1px 0 rgba(255,255,255,.85); */
+  /* 同一セレクターの後続設定を優先: backdrop-filter: blur(12px); */
+  /* 同一セレクターの後続設定を優先: -webkit-backdrop-filter: blur(12px); */
+  z-index: 1000;
+  transition: opacity .25s ease, visibility .25s ease, transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
+.menu-btn {
+  right: var(--sakuna-control-right);
+  width: var(--sakuna-control-size);
+  padding: 10px 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+/* 既存の三本線を小さく・細く統一 */
+.menu-btn span {
+  display: block;
+  /* 同一セレクターの後続設定を優先: width: 20px; */
+  /* 同一セレクターの後続設定を優先: height: 2px; */
+  margin: 0;
+  flex: 0 0 2px;
+  border-radius: 99px;
+  /* 同一セレクターの後続設定を優先: background: #bd75a7; */
+  transition: transform .25s ease, opacity .25s ease;
+}
+.menu-btn.active span:nth-child(1) { /* 同一セレクターの後続設定を優先: transform: translateY(7px) rotate(45deg); */ }
+.menu-btn.active span:nth-child(2) { opacity: 0; }
+.menu-btn.active span:nth-child(3) { /* 同一セレクターの後続設定を優先: transform: translateY(-7px) rotate(-45deg); */ }
+.search-button {
+  right: calc(var(--sakuna-control-right) + var(--sakuna-control-size) + var(--sakuna-control-gap));
+  width: var(--sakuna-control-size);
+  /* 同一セレクターの後続設定を優先: padding: 9px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-button img { /* 同一セレクターの後続設定を優先: width: 23px; */ /* 同一セレクターの後続設定を優先: height: 23px; */ object-fit: contain; }
+.back-button {
+  left: 16px;
+  width: auto;
+  /* 同一セレクターの後続設定を優先: min-width: var(--sakuna-control-size); */
+  /* 同一セレクターの後続設定を優先: padding: 0 15px; */
+  /* 同一セレクターの後続設定を優先: font-size: 13px; */
+  /* 同一セレクターの後続設定を優先: font-weight: 700; */
+  /* 同一セレクターの後続設定を優先: color: #986c91; */
+  white-space: nowrap;
+}
+.menu-btn:hover, .search-button:hover, .back-button:hover {
+  /* 同一セレクターの後続設定を優先: box-shadow: 0 6px 20px rgba(174,111,161,.23); */
+  /* 同一セレクターの後続設定を優先: transform: translateY(-2px); */
+}
+.menu-btn:focus-visible, .search-button:focus-visible, .back-button:focus-visible {
+  outline: 3px solid #83cce8;
+  outline-offset: 3px;
+}
+.quick-menu {
+  top: calc(var(--sakuna-control-top) + var(--sakuna-control-size) + 9px);
+  right: var(--sakuna-control-right);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(149,112,151,.16);
+  z-index: 1001;
+}
+/* スクロール中は３種類とも退避。停止350ms後に再表示 */
+body.is-scrolling .menu-btn,
+body.is-scrolling .search-button,
+body.is-scrolling .back-button {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-10px);
+}
+/* メニューを開いている間は操作できるよう表示を維持 */
+body.is-scrolling:has(.quick-menu.active) .menu-btn { opacity: 1; visibility: visible; pointer-events: auto; transform: none; }
+@media (max-width: 600px) {
+  :root { --sakuna-control-size: 40px; --sakuna-control-top: 12px; --sakuna-control-right: 12px; --sakuna-control-gap: 8px; }
+  .menu-btn { padding: 8px; }
+  .search-button { width: var(--sakuna-control-size); height: var(--sakuna-control-size); border-width: 1px; }
+  .search-button img { /* 同一セレクターの後続設定を優先: width: 21px; */ /* 同一セレクターの後続設定を優先: height: 21px; */ }
+  .back-button { left: 12px; /* 同一セレクターの後続設定を優先: padding: 0 11px; */ /* 同一セレクターの後続設定を優先: font-size: 12px; */ }
+}
+@media (prefers-reduced-motion: reduce) {
+  .menu-btn, .search-button, .back-button, .menu-btn span { transition: none; }
+}
+
+/* ==============================================
+   サイト全体のフォント：やさしい丸ゴシック
+   ============================================== */
+:root {
+  --sakuna-cute-font: "Zen Maru Gothic", "Hiragino Maru Gothic ProN",
+    "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+}
+html, body, button, input, select, textarea, optgroup {
+  font-family: var(--sakuna-cute-font);
+}
+body { font-weight: 500; }
+h1, h2, h3, h4, h5, h6,
+.wide-navigation a, .profile-name, .btn,
+.filter-button, .playlist-button, .back-button {
+  font-family: var(--sakuna-cute-font);
+  font-weight: 700;
+}
+.sakuna-opening__title { font-family: var(--sakuna-cute-font); font-weight: 900; }
+
+
+/* ==============================================
+   画像のデザインに合わせた固定ナビゲーション
+   ピンクの戻る / 水色の検索 / ピンクのメニュー
+   ============================================== */
+:root {
+  --sakuna-control-size: 46px;
+  --sakuna-control-top: 16px;
+  --sakuna-control-right: 16px;
+  --sakuna-control-gap: 9px;
+}
+.menu-btn, .search-button, .back-button {
+  background: #fff7fc;
+  border: 1px solid #f6d7e9;
+  box-shadow: 0 3px 12px rgba(193, 139, 176, .07);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.menu-btn {
+  /* 同一セレクターの後続設定を優先: background: #fff7fc; */
+  border-color: #f6d7e9;
+}
+.menu-btn span {
+  /* 同一セレクターの後続設定を優先: background: #b878a3; */
+  width: 18px;
+  height: 1.5px;
+  flex-basis: 1.5px;
+}
+.menu-btn.active span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.menu-btn.active span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+.search-button {
+  /* 同一セレクターの後続設定を優先: background: #edf8ff; */
+  border-color: #c4e8fb;
+  padding: 10px;
+}
+.search-button img { width: 21px; height: 21px; }
+.back-button {
+  background: #fff7fc;
+  border-color: #f6d7e9;
+  color: #ae729e;
+  padding: 0 16px;
+  min-width: 0;
+  font-size: 13px;
+  font-weight: 600;
+}
+.menu-btn:hover, .search-button:hover, .back-button:hover {
+  box-shadow: 0 5px 15px rgba(193, 139, 176, .15);
+  transform: translateY(-2px);
+}
+@media (max-width: 600px) {
+  :root {
+    --sakuna-control-size: 40px;
+    --sakuna-control-top: 12px;
+    --sakuna-control-right: 12px;
+    --sakuna-control-gap: 8px;
+  }
+  .back-button { padding: 0 12px; font-size: 12px; }
+  .search-button img { width: 19px; height: 19px; }
+}
+
+
+/* =====================================================
+   全HTML共通：オープニングと同じパステル背景
+   ===================================================== */
+:root {
+  --sakuna-pink-light: #ffe2f0;
+  --sakuna-white-light: #fff8fd;
+  --sakuna-blue-light: #e2f5ff;
+}
+html {
+  min-height: 100%;
+  /* 旧背景を無効化（SAKUNA CLEAR LUXEを適用）: background-color: var(--sakuna-white-light); */
+}
+body {
+  /* 旧背景を無効化（SAKUNA CLEAR LUXEを適用）: background-color: var(--sakuna-white-light); */
+  /* 旧背景を無効化（SAKUNA CLEAR LUXEを適用）: background-image:
+    radial-gradient(ellipse 48% 42% at 18% 13%, rgba(255,255,255,.95) 0%, rgba(255,255,255,0) 100%),
+    radial-gradient(ellipse 50% 46% at 83% 28%, rgba(207,241,255,.72) 0%, rgba(207,241,255,0) 100%),
+    radial-gradient(ellipse 54% 42% at 14% 83%, rgba(255,195,224,.42) 0%, rgba(255,195,224,0) 100%),
+    linear-gradient(135deg, var(--sakuna-pink-light) 0%, var(--sakuna-white-light) 48%, var(--sakuna-blue-light) 100%); */
+  /* 旧背景を無効化（SAKUNA CLEAR LUXEを適用）: background-attachment: fixed; */
+  /* 旧背景を無効化（SAKUNA CLEAR LUXEを適用）: background-repeat: no-repeat; */
+  min-height: 100vh;
+}
+@media (max-width: 600px) {
+  body { /* 同一セレクターの後続設定を優先: background-attachment: scroll; */ }
+}
+
+
+/* 全ページ共通：最下部右側のページトップボタン */
+.sakuna-page-top {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 24px clamp(12px, 3vw, 40px) 18px;
+  clear: both;
+}
+.sakuna-page-top__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 18px;
+  border: 1px solid rgba(245, 174, 211, .75);
+  border-radius: 999px;
+  background: linear-gradient(120deg, rgba(255,247,252,.95), rgba(232,247,255,.95));
+  color: #a46d98;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+  cursor: pointer;
+  box-shadow: 0 5px 16px rgba(182, 131, 168, .12);
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
+.sakuna-page-top__arrow {
+  display: grid;
+  place-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  /* 同一セレクターの後続設定を優先: background: #e5f5ff; */
+  color: #a46d98;
+  font-size: 17px;
+  line-height: 1;
+}
+.sakuna-page-top__button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 9px 22px rgba(182, 131, 168, .2);
+}
+.sakuna-page-top__button:focus-visible {
+  outline: 3px solid #86cde9;
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .sakuna-page-top__button { transition: none; }
+}
+
+
+/* =============================================================
+   SAKUNA CLEAR LUXE 
+   Base #FFBFD7 / BackSide #C6E4F7S
+   ============================================================= */
+:root {
+  --sakuna-base: #FFBFD7;
+  --sakuna-backside: #C6E4F7;
+  --sakuna-ink: #564c62;
+  --sakuna-rose-ink: #a15d84;
+  --sakuna-glass: rgba(255,255,255,.78);
+  --sakuna-glass-border: rgba(255,255,255,.88);
+  --sakuna-soft-shadow: 0 12px 34px rgba(156,115,151,.11), 0 2px 8px rgba(139,186,216,.09);
+}
+html { background-color: #fff7fb; }
+body {
+  color: var(--sakuna-ink);
+  background-color: #fff7fb;
+  background-image:
+    radial-gradient(ellipse 50% 45% at 9% 10%, rgba(255,191,215,.68), transparent 78%),
+    radial-gradient(ellipse 46% 45% at 93% 16%, rgba(198,228,247,.86), transparent 78%),
+    radial-gradient(ellipse 55% 38% at 70% 74%, rgba(255,191,215,.36), transparent 82%),
+    radial-gradient(ellipse 50% 38% at 14% 90%, rgba(198,228,247,.54), transparent 80%),
+    linear-gradient(128deg, #fff4f9 0%, #ffffff 43%, #eff9ff 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+/* 透明感のある面を、既存のカード・メニューのみに追加 */
+.card, .news-card, .playlist-card, .filter-section,
+.recent-additions, .wide-navigation, .quick-menu {
+  background: var(--sakuna-glass);
+  border: 1px solid var(--sakuna-glass-border);
+  box-shadow: var(--sakuna-soft-shadow);
+  -webkit-backdrop-filter: blur(14px) saturate(125%);
+  backdrop-filter: blur(14px) saturate(125%);
+}
+.card, .news-card, .playlist-card, .filter-section, .recent-additions {
+  border-radius: 16px;
+}
+.card, .news-card, .playlist-card {
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.card:hover, .news-card:hover, .playlist-card:hover {
+  border-color: rgba(255,191,215,.86);
+  box-shadow: 0 17px 40px rgba(162,119,158,.17), 0 5px 15px rgba(135,190,220,.13);
+}
+h1, h2, h3, h4 { color: #8d5e82; }
+h1 { text-shadow: 0 2px 16px rgba(255,255,255,.95); }
+.card p, .news-card p, .playlist-card p { color: var(--sakuna-ink); }
+.btn, .filter-button.active {
+  color: #795673;
+  background: linear-gradient(115deg, #ffcfdf 0%, #ffeaf3 48%, #d9effb 100%);
+  border: 1px solid rgba(255,255,255,.84);
+  box-shadow: 0 5px 16px rgba(172,126,166,.13);
+  transition: transform .22s ease, box-shadow .22s ease, filter .22s ease;
+}
+.btn:hover, .filter-button.active:hover {
+  color: #754f6e;
+  background: linear-gradient(115deg, #ffc2d9 0%, #ffe5f1 48%, #c6e4f7 100%);
+  box-shadow: 0 8px 20px rgba(172,126,166,.2);
+  filter: saturate(1.04);
+}
+.wide-navigation a:hover, .quick-menu a:hover,
+.filter-button:hover, .playlist-button:hover {
+  background: rgba(255,191,215,.28);
+  color: var(--sakuna-rose-ink);
+}
+/* 既存のコンパクトな操作ボタンの位置 */
+.menu-btn, .search-button, .back-button,
+.sakuna-page-top__button {
+  background: linear-gradient(135deg, rgba(255,255,255,.91), rgba(255,238,246,.85) 52%, rgba(225,244,255,.9));
+  border-color: rgba(255,255,255,.94);
+  box-shadow: 0 6px 19px rgba(161,119,159,.13), inset 0 1px 0 rgba(255,255,255,.9);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+}
+.search-button { background: linear-gradient(135deg, #f7fcff, #deeffb); }
+.menu-btn { background: linear-gradient(135deg, #fffafd, #ffe7f2); }
+.menu-btn span { background: #ad779d; }
+.sakuna-page-top__arrow { background: #e4f4ff; }
+a:focus-visible, button:focus-visible, .menu-btn:focus-visible {
+  outline: 3px solid #84c9ed;
+  outline-offset: 3px;
+}
+@media (max-width: 600px) {
+  body { background-attachment: scroll; }
+  .card, .news-card, .playlist-card, .filter-section,
+  .recent-additions, .wide-navigation, .quick-menu {
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card, .news-card, .playlist-card, .btn { transition: none; }
+}

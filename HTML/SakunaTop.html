@@ -14,7 +14,7 @@
 
     <section>
         <h1>🎀結城さくなまとめ🐾</h1>
-        <h2>トップ -TOP-</h2>
+        <h2>　トップ -TOP-</h2>
 
         <h2>カレンダーイベント</h2>
     </section>
@@ -161,7 +161,7 @@
 
     <p>
         ※ファンによる非公式のサイトです。
-        <br>結城さくなさんとは一切関係ありません。
+        <br>　結城さくなさんとは一切関係ありません。
     </p>
 
     <p class="sns-title">
@@ -211,7 +211,94 @@
         <a href="../JUMPHTML/SakunaStream.html">STREAM</a>
     </nav>
 
-    <script src="../JS/SakunaOpening.js"></script>
+
+    <!-- 背景装飾：レイアウトに影響しないピンク・水色のハート -->
+    <div class="sakuna-floating-hearts" aria-hidden="true"></div>
+
+    <script>
+      (() => {
+        const layer = document.querySelector('.sakuna-floating-hearts');
+        if (!layer) return;
+        const colors = ['pink', 'blue'];
+        for (let i = 0; i < 12; i++) {
+          const heart = document.createElement('span');
+          heart.className = 'sakuna-floating-heart ' + colors[i % 2];
+          heart.textContent = '♥';
+          heart.style.left = ((i * 43 + 13) % 97) + '%';
+          heart.style.top = ((i * 37 + 7) % 94) + '%';
+          heart.style.fontSize = (9 + (i * 5) % 9) + 'px';
+          heart.style.animationDelay = '-' + ((i * 1.37) % 12).toFixed(2) + 's';
+          heart.style.animationDuration = (13 + (i % 6) * 1.7) + 's';
+          layer.appendChild(heart);
+        }
+      })();
+    </script>
+
+   
+    <script>
+      /* 背景ハートが文字・画像・カード・操作部品に重なる場合は非表示にする */
+      (() => {
+        'use strict';
+        const HEART = '.sakuna-floating-heart';
+        const AVOID = [
+          'h1','h2','h3','h4','h5','h6','p','a','button','input','select','textarea',
+          'img','video','iframe','table','ul','ol','blockquote',
+          '.card','.news-card','.playlist-card','.recent-additions',
+          '.wide-navigation','.quick-menu','.filter-section','.common-header',
+          '.profile-list','.search-area','.sakuna-page-top',
+          '.sakuna-opening','.back-button','.search-button','.menu-btn'
+        ].join(',');
+        const GAP = 8;
+        const intersect = (a, b) => a.left < b.right + GAP && a.right > b.left - GAP &&
+          a.top < b.bottom + GAP && a.bottom > b.top - GAP;
+        const visible = (el) => {
+          const s = getComputedStyle(el);
+          return s.display !== 'none' && s.visibility !== 'hidden' && Number(s.opacity) !== 0;
+        };
+        let last = 0;
+        function update(time) {
+          requestAnimationFrame(update);
+          if (time - last < 120) return;
+          last = time;
+          const hearts = [...document.querySelectorAll(HEART)];
+          if (!hearts.length) return;
+          const obstacles = [...document.querySelectorAll(AVOID)]
+            .filter(el => !el.closest('.sakuna-floating-hearts') && visible(el))
+            .map(el => el.getBoundingClientRect())
+            .filter(r => r.width > 0 && r.height > 0 && r.bottom >= 0 && r.top <= innerHeight && r.right >= 0 && r.left <= innerWidth);
+          for (const heart of hearts) {
+            const r = heart.getBoundingClientRect();
+            const blocked = obstacles.some(o => intersect(r, o));
+            heart.style.visibility = blocked ? 'hidden' : 'visible';
+          }
+        }
+        requestAnimationFrame(update);
+      })();
+    </script>
+
+    <!-- スクロール中は検索・戻る・メニューボタンを隠し、停止後に再表示 -->
+    <script>
+      (() => {
+        let scrollStopTimer;
+        let previousY = window.scrollY;
+        const showButtons = () => document.body.classList.remove('is-scrolling');
+        window.addEventListener('scroll', () => {
+          const currentY = window.scrollY;
+          if (Math.abs(currentY - previousY) < 1) return;
+          previousY = currentY;
+          document.body.classList.add('is-scrolling');
+          clearTimeout(scrollStopTimer);
+          scrollStopTimer = setTimeout(showButtons, 350);
+        }, { passive: true });
+        window.addEventListener('pageshow', () => {
+          clearTimeout(scrollStopTimer);
+          previousY = window.scrollY;
+          showButtons();
+        });
+      })();
+    </script>
+
+   
 
     <!-- JSファイル読み込み -->
     <script src="../JS/Sakuna.js"></script>
